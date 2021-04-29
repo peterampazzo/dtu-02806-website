@@ -6,6 +6,7 @@ module.exports = {
   plugins: [
     "gatsby-plugin-image",
     "gatsby-plugin-react-helmet",
+    `gatsby-plugin-netlify`,
     // "gatsby-plugin-sitemap",
     "gatsby-plugin-postcss",
     {
@@ -36,7 +37,10 @@ module.exports = {
     {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
-        fonts: [`Playfair Display\:500,600,700,800,900`, `Open Sans\:200,300,400,500,600,700`],
+        fonts: [
+          `Playfair Display\:500,600,700,800,900`,
+          `Open Sans\:200,300,400,500,600,700`,
+        ],
         display: "swap",
       },
     },
