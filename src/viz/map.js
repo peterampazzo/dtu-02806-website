@@ -84,16 +84,17 @@ const GeoJSONMap = ({ property, title }) => {
             style={{
               position: `absolute`,
               margin: `8px`,
-              padding: `4px`,
+              // padding: `4px`,
               background: `rgba(0, 0, 0, 0.8)`,
               color: `#fff`,
-              maxWidth: `500px`,
-              fontSize: `20px`,
+              maxWidth: `200px`,
+              fontSize: `16px`,
               zIndex: 9,
               pointerEvents: `none`,
               left: hoverInfo.x,
               top: hoverInfo.y,
             }}
+            className="rounded-xl p-4"
           >
             <div>District: {hoverInfo.feature.properties.NOM}</div>
             <div>

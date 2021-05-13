@@ -1,4 +1,5 @@
 import * as React from "react";
+import { ThemeProvider, createMuiTheme } from '@material-ui/core/styles';
 
 import MyRadar from "../viz/radar";
 import FeelingsBarChart from "../viz/feelings-bar";
@@ -6,7 +7,17 @@ import FeelingsDist from "../viz/feelings-dist";
 import Maps from "../components/maps";
 
 const IndexPage = () => {
+
+  const theme = createMuiTheme({
+    typography: {
+      fontFamily: [
+        // 'Open Sans',
+        'Playfair Display',
+      ].join(','),
+    },});
+
   return (
+    <ThemeProvider theme={theme}>
     <div className="relative bg-yellow-400 bg-opacity-25 overflow-hidden">
       <div className="mx-6">
         <div className="max-w-3xl mx-auto">
@@ -85,6 +96,7 @@ const IndexPage = () => {
         </div>
       </div>
     </div>
+    </ThemeProvider>
   );
 };
 
