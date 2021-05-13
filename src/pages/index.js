@@ -1,8 +1,13 @@
 import * as React from "react";
 
+import MyRadar from "../viz/radar";
+import FeelingsBarChart from "../viz/feelings-bar";
+import FeelingsDist from "../viz/feelings-dist";
+import Maps from "../components/maps";
+
 const IndexPage = () => {
   return (
-    <div className="relative bg-yellow-700	bg-opacity-50 overflow-hidden">
+    <div className="relative bg-yellow-400 bg-opacity-25 overflow-hidden">
       <div className="mx-6">
         <div className="max-w-3xl mx-auto">
           <h3 className="text-md text-center mt-6 mb-8">
@@ -16,7 +21,7 @@ const IndexPage = () => {
               Organizers, speakers, and attendees need to all work together to
               make events more inclusive.
             </h4>
-            <div className="border-red-900 border-t-2 border-b-2 py-4 px-6 mb-12">
+            <div className="border-yellow-600 border-t-2 border-b-2 py-4 px-6 mb-12">
               <ul className="list-none flex text-center justify-between text-lg font-medium flex-wrap flex-col md:flex-row">
                 <li>Silvia De Sojo</li>
                 <li>Stefan Petrovic</li>
@@ -37,6 +42,7 @@ const IndexPage = () => {
               fringilla varius molestie. Morbi sit amet pretium quam. Quisque ac
               dolor in mauris feugiat sagittis.
             </p>
+            <Maps />
             <p>
               Donec ut dolor sit amet erat consequat tempor. Integer dictum
               ultrices justo, nec dapibus tortor suscipit quis. Ut hendrerit
@@ -48,6 +54,7 @@ const IndexPage = () => {
               facilisis urna. Praesent porta dui id mi hendrerit, a posuere orci
               congue.
             </p>
+            <MyRadar />
             <p>
               Duis gravida felis ac est pulvinar tincidunt. Vestibulum interdum
               tincidunt malesuada. Cras vel sagittis erat. Nullam ut mattis
@@ -55,6 +62,7 @@ const IndexPage = () => {
               ipsum lorem, eu tincidunt orci rhoncus tristique. Donec augue
               sapien, mattis quis ullamcorper a, posuere at dui.
             </p>
+            <FeelingsBarChart />
             <p>
               Nunc et libero est. Vestibulum fringilla, metus in tempus
               suscipit, quam arcu condimentum nunc, nec tincidunt tortor nisi
@@ -69,6 +77,10 @@ const IndexPage = () => {
               et. Sed tincidunt ut leo at vehicula. Duis tortor neque, mollis ac
               condimentum et, interdum nec nulla.
             </p>
+            <div className="grid grid-cols-2">
+              <FeelingsDist index={1} />
+              <FeelingsDist index={2} />
+            </div>
           </main>
         </div>
       </div>
