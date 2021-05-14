@@ -56,9 +56,6 @@ const IndexPage = ({ data }) => {
           <Row className="bg-yellow-700 text-white">
             <MDXRenderer>{data.districts.body}</MDXRenderer>
           </Row>
-          <div className="mx-auto" style={{ height: `450px`, width: `1200px` }}>
-            <iframe src="/bokeh.html" className="h-full w-full" title="bokeh" />
-          </div>
           <Row className="bg-green-700">
             <MDXRenderer>{data.feelings.body}</MDXRenderer>
           </Row>
