@@ -21,10 +21,11 @@ const IndexPage = ({ data }) => {
     const childClassNames = classNames("mx-auto p-8", className);
     return <div className={childClassNames}>{children}</div>;
   };
+  // bg-yellow-400 bg-opacity-25 
 
   return (
     <ThemeProvider theme={theme}>
-      <div className="relative bg-yellow-400 bg-opacity-25 overflow-hidden">
+      <div className="relative overflow-hidden bg-yellow-600 text-white"> 
         <div className="mx-6">
           <div className="max-w-3xl mx-auto">
             <h3 className="text-md text-center mt-6 mb-8">
@@ -37,7 +38,7 @@ const IndexPage = ({ data }) => {
               <h4 className="text-lg md:text-xl text-center mb-8 m-auto">
                 Our objective is to use visualization tools and clustering techniques to recognise the effects that the demographic characteristics of districts have over child welfare.
               </h4>
-              <div className="border-yellow-600 border-t-2 border-b-2 py-4 px-6 mb-12">
+              <div className="border-yellow-400 border-t-2 border-b-2 py-4 px-6 mb-12">
                 <ul className="list-none flex text-center justify-between text-lg font-medium flex-wrap flex-col md:flex-row">
                   <li>Silvia De Sojo</li>
                   <li>Stefan Petrovic</li>
@@ -52,16 +53,16 @@ const IndexPage = ({ data }) => {
           <Row className="mt-0">
             <MDXRenderer>{data.about.body}</MDXRenderer>
           </Row>
-          <Row className="bg-yellow-600 text-white">
+          <Row className="bg-yellow-100 text-black">
             <MDXRenderer>{data.intro.body}</MDXRenderer>
           </Row>
-          <Row className="bg-yellow-200">
+          <Row className="bg-yellow-50 text-black">
             <MDXRenderer>{data.districts.body}</MDXRenderer>
           </Row>
-          <Row className="bg-yellow-100">
+          <Row className="bg-yellow-100 text-black">
             <MDXRenderer>{data.feelings.body}</MDXRenderer>
           </Row>
-          <Row className="bg-yellow-50">
+          <Row className="bg-yellow-50 text-black">
             <MDXRenderer>{data.satifaction.body}</MDXRenderer>
           </Row>
           <Row>
