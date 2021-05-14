@@ -78,7 +78,9 @@ const IndexPage = ({ data }) => {
             tincidunt ut leo at vehicula. Duis tortor neque, mollis ac
             condimentum et, interdum nec nulla.
           </p>
-          <Links />
+          <div className="mb-6">
+            <Links />
+          </div>
         </main>
       </div>
     </ThemeProvider>
