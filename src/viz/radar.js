@@ -113,7 +113,7 @@ const RadarBox = () => {
         <h1 className="text-center mb-4 text-xl">
           Select the districts to display
         </h1>
-        <FormGroup row className="shadow-2xl p-4 bg-white rounded-lg justify-center">
+        <FormGroup row className="shadow-2xl mx-auto max-w-3xl p-4 bg-white rounded-lg justify-center">
           {districts.map((item, index) => (
             <FormControlLabel
               control={

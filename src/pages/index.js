@@ -5,6 +5,8 @@ import { MDXRenderer } from "gatsby-plugin-mdx";
 import { ThemeProvider, createMuiTheme } from "@material-ui/core/styles";
 import classNames from "classnames";
 
+import Links from "../components/links"
+
 const IndexPage = ({ data }) => {
   const theme = createMuiTheme({
     typography: {
@@ -45,9 +47,10 @@ const IndexPage = ({ data }) => {
               </div>
             </div>
           </div>
+          <Links />
         </div>
         <main className="font-serif">
-          <Row>
+          <Row className="mt-0">
             <MDXRenderer>{data.about.body}</MDXRenderer>
           </Row>
           <Row className="bg-yellow-700 text-white">
