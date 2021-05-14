@@ -1,0 +1,40 @@
+---
+id: clustering
+---
+
+## K-Means Clustering
+
+So far several different attributes has been manually analyzed to see their impact of the life satisfaction of the questionaire participants. 
+But we were curious to see if the data would have any underlying clustering, that wouldn't be possible for humans to see, 
+but maybe a machine learning model would be able to catch.
+
+To explore that option, a K-means clustering model were created. The data was split into two categories, using the `SLSSmc` column. 
+The value in this column represented if the participants were: _"Very satisfied", "Fairly satisfied", "Slightly satisfied",_ or _"Not at all"_.
+Here, one category would represent participants who were _"very satisfied"_ and all other options would be categorized as _"other"_, 
+in an effort to make the two clusters equal in size.
+
+The data used in the model were a combination of all attributes investigated during the satisfaction analysis, 
+including columns as `Sexe` (Sex), `Edat` (Age), `ERFDbllp` (Type of neighbourhood), etc. 
+More data columns were also added in an effort to include as much information as possible in the analysis. 
+Relevant columns were binarized or one-hot-encoded.
+
+A K-Means model with two clusters were initialized using SKLearn. The data was then fitted to the model and labels from the clusters were generated.
+Because K-Means model knows nothing about the identity of the clusters, the labels may be permuted, 
+by matching each learned cluster label with the true labels found in them.
+
+It was found that the K-Means clustering model accurately clusters the data with an accuracy of $\sim 69.7\%$. 
+Looking at this number alone, makes it look like some kind of clustering is apperent, but it is misleading. 
+The two categories created, has the following number of observations:
+
+$$
+\text{Very satisfied} = 2466,\ \text{other} = 1071.
+$$
+
+With a quick calculation you get the follwing result:
+
+$$ 
+\frac{2466}{2466+1071} = 0.6972010178117048 
+$$
+
+So the accuracy achieved could in reality be the result of clustering all data points as a single cluster or, if two clusters are present, 
+both clusters consists of a majority of the _"very satisfied"_ category.
