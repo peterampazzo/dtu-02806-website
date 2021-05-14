@@ -21,10 +21,13 @@ const Links = () => {
         alignItems: `center`,
       }}
     >
-      <Button label="Code" to="#">
+      <Button label="Code" to="https://github.com/peterampazzo/dtu-02806">
         <FiGithub size={size} className="text-yellow-800" />
       </Button>
-      <Button label="Dataset" to="#">
+      <Button
+        label="Dataset"
+        to="https://opendata-ajuntament.barcelona.cat/data/en/dataset/ebsib-bcn-enquesta-benestar-subjectiu-infancia#fieldDescription"
+      >
         <FiHardDrive
           size={size}
           style={{
@@ -34,7 +37,7 @@ const Links = () => {
           className="text-yellow-800"
         />
       </Button>
-      <Button label="Notebook" to="#">
+      <Button label="Notebook" to="/main-explainer.html">
         <FiFileText size={size} className="text-yellow-800" />
       </Button>
     </div>
