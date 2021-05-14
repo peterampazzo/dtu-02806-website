@@ -49,9 +49,9 @@ const SatisfactionPlots = () => {
         }}
         row
       >
-        <FormControlLabel value={"1"} control={<Radio />} label="Plot 1" />
-        <FormControlLabel value={"2"} control={<Radio />} label="Plot 2" />
-        <FormControlLabel value={"3"} control={<Radio />} label="Plot 3" />
+        <FormControlLabel value={"1"} control={<Radio />} label="Districts" />
+        <FormControlLabel value={"2"} control={<Radio />} label="Incomes" />
+        <FormControlLabel value={"3"} control={<Radio />} label="Concerns" />
       </RadioGroup>
       <SatisfactionBarChart data={data} labels={labels} />
     </div>
