@@ -35,8 +35,7 @@ const IndexPage = ({ data }) => {
             </h1>
             <div className="flex flex-col m-auto w-full md:w-4/6 justify-center">
               <h4 className="text-lg md:text-2xl text-center mb-8 m-auto">
-                Organizers, speakers, and attendees need to all work together to
-                make events more inclusive.
+                There are a lot of opinions on what is best for kids? From parents trying to educate them to politicians defining the educational system. But what actions will help shape a happy and healthy society? And how can we improve children's well-being? 
               </h4>
               <div className="border-yellow-600 border-t-2 border-b-2 py-4 px-6 mb-12">
                 <ul className="list-none flex text-center justify-between text-lg font-medium flex-wrap flex-col md:flex-row">
