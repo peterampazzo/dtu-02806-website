@@ -6,12 +6,12 @@ import { legend } from "../utils/map-colors";
 const Maps = () => {
   return (
     <div className="my-4">
-      <h1 className="text-center text-3xl mb-4">About your Neighborhood</h1>
+      <h1>About your Neighborhood</h1>
       <div className="grid grid-cols-2 gap-4 pb-6">
         <Map property={"b_seguretat"} title="Neighborhood security" />
         <Map property={"b_joc"} title="Neighborhood palygrounds" />
       </div>
-      <div className="mt-8 p-4 flex justify-evenly align-center text-center shadow-2xl rounded-lg bg-white text-black">
+      <div className="mt-8 p-4 mx-auto max-w-3xl flex justify-evenly align-center text-center shadow-2xl rounded-lg bg-white text-black">
         {legend.map((item, index) => (
           <div key={index} className="text-xl">
             <div
