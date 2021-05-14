@@ -1,4 +1,5 @@
 import * as React from "react";
+// import Helmet from "react-helmet";
 import { graphql } from "gatsby";
 import { MDXRenderer } from "gatsby-plugin-mdx";
 import { ThemeProvider, createMuiTheme } from "@material-ui/core/styles";
@@ -55,6 +56,9 @@ const IndexPage = ({ data }) => {
             a, imperdiet nunc. className aptent taciti sociosqu ad litora
             torquent per conubia nostra, per inceptos himenaeos.
           </p>
+          <div className="mx-auto" style={{ height: `450px`, width: `1200px` }}>
+            <iframe src="/bokeh.html" className="h-full w-full" />
+          </div>
           <Row className="bg-black text-white">
             <MDXRenderer>{data.about.body}</MDXRenderer>
           </Row>
