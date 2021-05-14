@@ -31,14 +31,11 @@ const IndexPage = ({ data }) => {
               02806 Social data analysis and visualization
             </h3>
             <h1 className="text-4xl md:text-6xl text-center font-extrabold mb-10 font-serif">
-              Visualizing child welfare in Barcelona
+              Understanding child welfare in Barcelona
             </h1>
             <div className="flex flex-col m-auto w-full md:w-4/6 justify-center">
               <h4 className="text-lg md:text-xl text-center mb-8 m-auto">
-                There are a lot of opinions on what is best for kids. From
-                parents trying to educate them, to politicians defining the
-                educational system. But what actions will help shape a happy and
-                healthy society? And how can we improve children's well-being?
+                The objective of the analysis is to use visualization tools and clustering techniques to recognise the effects of the demographic characteristics of different areas over child welfare.
               </h4>
               <div className="border-yellow-600 border-t-2 border-b-2 py-4 px-6 mb-12">
                 <ul className="list-none flex text-center justify-between text-lg font-medium flex-wrap flex-col md:flex-row">
