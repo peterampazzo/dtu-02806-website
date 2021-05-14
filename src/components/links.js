@@ -5,7 +5,6 @@ import { FiGithub, FiFileText, FiHardDrive } from "react-icons/fi";
 
 const Links = () => {
   const size = 60;
-  const color = `#3cb371`;
 
   const Button = ({ label, to, children }) => (
     <Tooltip title={label}>
@@ -23,20 +22,20 @@ const Links = () => {
       }}
     >
       <Button label="Code" to="#">
-        <FiGithub size={size} style={{ color: color }} />
+        <FiGithub size={size} className="text-yellow-800" />
       </Button>
-      <Button label="Data set" to="#">
+      <Button label="Dataset" to="#">
         <FiHardDrive
           size={size}
           style={{
             marginRight: `30px`,
             marginLeft: `30px`,
-            color: color,
           }}
+          className="text-yellow-800"
         />
       </Button>
-      <Button label="Jupyter Notebook" to="#">
-        <FiFileText size={size} style={{ color: color }} />
+      <Button label="Notebook" to="#">
+        <FiFileText size={size} className="text-yellow-800" />
       </Button>
     </div>
   );

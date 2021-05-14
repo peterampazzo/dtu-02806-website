@@ -5,7 +5,7 @@ import { MDXRenderer } from "gatsby-plugin-mdx";
 import { ThemeProvider, createMuiTheme } from "@material-ui/core/styles";
 import classNames from "classnames";
 
-import Links from "../components/links"
+import Links from "../components/links";
 
 const IndexPage = ({ data }) => {
   const theme = createMuiTheme({
@@ -31,13 +31,16 @@ const IndexPage = ({ data }) => {
               02806 Social data analysis and visualization
             </h3>
             <h1 className="text-4xl md:text-6xl text-center font-extrabold mb-10 font-serif">
-             Visualizing child welfare in Barcelona
+              Visualizing child welfare in Barcelona
             </h1>
             <div className="flex flex-col m-auto w-full md:w-4/6 justify-center">
               <h4 className="text-lg md:text-2xl text-center mb-8 m-auto">
-                There are a lot of opinions on what is best for kids? From parents trying to educate them to politicians defining the educational system. But what actions will help shape a happy and healthy society? And how can we improve children's well-being? 
+                There are a lot of opinions on what is best for kids? From
+                parents trying to educate them to politicians defining the
+                educational system. But what actions will help shape a happy and
+                healthy society? And how can we improve children's well-being?
               </h4>
-              <div className="border-yellow-900 border-t-2 border-b-2 py-4 px-6 mb-12">
+              <div className="border-yellow-600 border-t-2 border-b-2 py-4 px-6 mb-12">
                 <ul className="list-none flex text-center justify-between text-lg font-medium flex-wrap flex-col md:flex-row">
                   <li>Silvia De Sojo</li>
                   <li>Stefan Petrovic</li>
@@ -52,7 +55,7 @@ const IndexPage = ({ data }) => {
           <Row className="mt-0">
             <MDXRenderer>{data.about.body}</MDXRenderer>
           </Row>
-          <Row className="bg-yellow-200 text-white">
+          <Row className="bg-yellow-200">
             <MDXRenderer>{data.districts.body}</MDXRenderer>
           </Row>
           <Row className="bg-yellow-100">
@@ -62,18 +65,18 @@ const IndexPage = ({ data }) => {
             <MDXRenderer>{data.satifaction.body}</MDXRenderer>
           </Row>
           <p className="mt-8">
-            CONCLUSION - Nunc et libero est. Vestibulum fringilla, metus in tempus suscipit,
-            quam arcu condimentum nunc, nec tincidunt tortor nisi fringilla
-            erat. Nullam venenatis, nulla sit amet malesuada tempor, nisl odio
-            placerat dui, placerat scelerisque ante felis congue nulla. Proin
-            nec ornare ante. Donec sollicitudin nibh eu tellus sodales, eu
-            sollicitudin quam euismod. Nullam eget arcu nec nunc auctor
-            consequat sed sed nisl. Donec gravida risus in leo vulputate
-            sodales. Suspendisse nibh purus, vestibulum nec porta ut, vehicula
-            eget urna. Mauris eget imperdiet enim, quis ultrices eros. Quisque
-            blandit elementum dolor, in venenatis nibh iaculis et. Sed tincidunt
-            ut leo at vehicula. Duis tortor neque, mollis ac condimentum et,
-            interdum nec nulla.
+            CONCLUSION - Nunc et libero est. Vestibulum fringilla, metus in
+            tempus suscipit, quam arcu condimentum nunc, nec tincidunt tortor
+            nisi fringilla erat. Nullam venenatis, nulla sit amet malesuada
+            tempor, nisl odio placerat dui, placerat scelerisque ante felis
+            congue nulla. Proin nec ornare ante. Donec sollicitudin nibh eu
+            tellus sodales, eu sollicitudin quam euismod. Nullam eget arcu nec
+            nunc auctor consequat sed sed nisl. Donec gravida risus in leo
+            vulputate sodales. Suspendisse nibh purus, vestibulum nec porta ut,
+            vehicula eget urna. Mauris eget imperdiet enim, quis ultrices eros.
+            Quisque blandit elementum dolor, in venenatis nibh iaculis et. Sed
+            tincidunt ut leo at vehicula. Duis tortor neque, mollis ac
+            condimentum et, interdum nec nulla.
           </p>
         </main>
       </div>
