@@ -55,6 +55,9 @@ const IndexPage = ({ data }) => {
           <Row className="mt-0">
             <MDXRenderer>{data.about.body}</MDXRenderer>
           </Row>
+          <Row className="bg-yellow-600 text-white">
+            <MDXRenderer>{data.intro.body}</MDXRenderer>
+          </Row>
           <Row className="bg-yellow-200">
             <MDXRenderer>{data.districts.body}</MDXRenderer>
           </Row>
@@ -90,6 +93,9 @@ const IndexPage = ({ data }) => {
 export const pageQuery = graphql`
   query {
     about: mdx(frontmatter: { id: { eq: "about" } }) {
+      body
+    }
+    intro: mdx(frontmatter: { id: { eq: "introductory" } }) {
       body
     }
     districts: mdx(frontmatter: { id: { eq: "districts" } }) {
