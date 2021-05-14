@@ -108,10 +108,10 @@ const RadarBox = () => {
   };
 
   return (
-    <div className="border-2 border-dashed border-gray-600 my-6">
+    <div className="mx-auto max-w-6xl	border-2 border-dashed border-gray-600 my-6">
       <div className="p-4">
         <h1 className="text-center mb-4 text-xl">
-          Select the districts to display
+          Feelings Radar
         </h1>
         <FormGroup
           row

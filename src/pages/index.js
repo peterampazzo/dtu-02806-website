@@ -48,7 +48,7 @@ const IndexPage = ({ data }) => {
           </div>
           <Links />
         </div>
-        <main className="font-serif">
+        <main className="font-serif text-justify">
           <Row className="mt-0">
             <MDXRenderer>{data.about.body}</MDXRenderer>
           </Row>

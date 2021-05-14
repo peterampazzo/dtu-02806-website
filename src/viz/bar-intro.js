@@ -1,22 +1,29 @@
 import React from "react";
 
 import { ResponsiveBar } from "@nivo/bar";
-import { colors_feeling } from "../utils/colors";
+const colors = [
+  "#6A4C93",
+  "#1982C4",
+  "#8AC926",
+  "#FFCA3A",
+  "#FF595E",
+  "#00378F",
+];
 
-const SatisfactionBarChart = ({ data, labels }) => {
+const IntroBarChart = ({ data, labels }) => {
   return (
-    <div style={{ height: `300px`, maxWidth: `960px` }} className="mx-auto">
+    <div style={{ height: `150px` }}>
       <ResponsiveBar
         data={data}
-        keys={["Very", "Fairly", "Slightly", "Not at all", "NC"]}
-        indexBy={labels}
-        margin={{ top: 0, right: 130, bottom: 70, left: 200 }}
+        keys={labels}
+        indexBy="value"
+        margin={{ top: 0, right: 130, bottom: 70, left: 130 }}
         padding={0.3}
         layout="horizontal"
         enableLabel={false}
         valueScale={{ type: "linear" }}
         indexScale={{ type: "band", round: true }}
-        colors={(d) => colors_feeling[d.id]}
+        colors={colors}
         borderColor={{ from: "color", modifiers: [["darker", 1.6]] }}
         tooltip={({ id, value, color }) => (
           <strong style={{ color }}>
@@ -34,7 +41,7 @@ const SatisfactionBarChart = ({ data, labels }) => {
         axisRight={null}
         axisBottom={{
           tickSize: 0,
-          legend: "Ratio of answers per level",
+          legend: "Ratio of participant",
           legendPosition: "middle",
           legendOffset: 32,
         }}
@@ -79,4 +86,4 @@ const SatisfactionBarChart = ({ data, labels }) => {
   );
 };
 
-export default SatisfactionBarChart;
+export default IntroBarChart;
