@@ -1,4 +1,4 @@
-const colors = {
+export const colors_district = {
   "Ciutat Vella": "#FF1313",
   "L'Eixample": "#FF720D",
   "Sants-Montjuïc": "#FE9B15",
@@ -11,4 +11,10 @@ const colors = {
   "Sant Martí": "#FF23C4",
 };
 
-export default colors;
+export const colors_feeling = {
+  Very: "#FFCA3A",
+  Fairly: "#DAAB50",
+  Slightly: "#A3798B",
+  "Not at all": "#7D5C9B",
+  NC: "#4D376C",
+};
