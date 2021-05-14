@@ -12,6 +12,17 @@
     @apply mb-8;
     @apply text-lg;
     @apply leading-8;
+    @apply max-w-3xl;
+    @apply mx-auto;
+  }
+  main h1 {
+    @apply font-serif;
+    @apply mb-8;
+    @apply text-3xl;
+    @apply leading-8;
+    @apply text-center;
+    @apply capitalize;
+    @apply font-extrabold;
   }
   /* main ul {
       @apply mb-8;

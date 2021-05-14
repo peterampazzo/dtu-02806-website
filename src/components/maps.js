@@ -11,7 +11,7 @@ const Maps = () => {
         <Map property={"b_seguretat"} title="Neighborhood security" />
         <Map property={"b_joc"} title="Neighborhood palygrounds" />
       </div>
-      <div className="mt-8 p-4 flex justify-evenly align-center text-center shadow-2xl rounded-lg bg-white">
+      <div className="mt-8 p-4 flex justify-evenly align-center text-center shadow-2xl rounded-lg bg-white text-black">
         {legend.map((item, index) => (
           <div key={index} className="text-xl">
             <div

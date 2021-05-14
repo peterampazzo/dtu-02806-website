@@ -5,7 +5,6 @@ import ReactMapGL, { Source, Layer } from "react-map-gl";
 import boundaries from "../data/districtes.json";
 import { stops } from "../utils/map-colors";
 
-// color.type: expected one of [identity, exponential, interval, categorical],
 export const dataLayer = (property) => ({
   id: "data",
   type: "fill",
@@ -14,7 +13,6 @@ export const dataLayer = (property) => ({
       type: "interval",
       property: property,
       stops: stops,
-      // type: "interval",
     },
     "fill-outline-color": "#000",
     "fill-opacity": 0.75,
@@ -80,11 +78,9 @@ const GeoJSONMap = ({ property, title }) => {
         </Source>
         {hoverInfo && hoverInfo.feature.properties.NOM && (
           <div
-            className="tooltip"
             style={{
               position: `absolute`,
               margin: `8px`,
-              // padding: `4px`,
               background: `rgba(0, 0, 0, 0.8)`,
               color: `#fff`,
               maxWidth: `200px`,

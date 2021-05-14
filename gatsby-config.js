@@ -35,6 +35,14 @@ module.exports = {
       __key: "pages",
     },
     {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `posts`,
+        path: `${__dirname}/src/content/`,
+      },
+      __key: "content",
+    },
+    {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
         fonts: [
