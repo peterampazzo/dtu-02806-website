@@ -5,7 +5,7 @@ import { Checkbox, FormGroup, FormControlLabel } from "@material-ui/core";
 import dataPositive from "../data/radar-positive.json";
 import dataNegative from "../data/radar-negative.json";
 
-import colors from "../utils/colors";
+import { colors_district } from "../utils/colors";
 import districts from "../utils/districts";
 
 const RadarPlot = ({ layers, data }) => {
@@ -37,12 +37,12 @@ const RadarPlot = ({ layers, data }) => {
         margin={{ top: 10, right: 60, bottom: 10, left: 80 }}
         // curve="linearClosed"
         borderWidth={1}
-        borderColor={(d) => colors[d.key]}
+        borderColor={(d) => colors_district[d.key]}
         gridLevels={5}
         gridShape="linear"
         gridLabelOffset={20}
         enableDots={false}
-        colors={(d) => colors[d.key]}
+        colors={(d) => colors_district[d.key]}
         fillOpacity={0.5}
         blendMode="multiply"
         animate={true}
@@ -120,7 +120,7 @@ const RadarBox = () => {
                 <Checkbox
                   key={index}
                   onChange={() => handleCheck(item)}
-                  style={{ color: colors[item] }}
+                  style={{ color: colors_district[item] }}
                   checked={checkedValues.includes(item) ? true : false}
                   // labelStyle={{color: colors[item]}}
                   // iconStyle={{fill: colors[item]}}
