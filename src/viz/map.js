@@ -62,7 +62,7 @@ const GeoJSONMap = ({ property, title }) => {
 
   return (
     <div style={{ height: `450px`, marginTop: 0 }}>
-      <h3 className="text-center text-xl mb-2">{title}</h3>
+      <h3 className="text-center text-xl mb-2 capitalize">{title}</h3>
       <ReactMapGL
         {...viewport}
         {...settings}

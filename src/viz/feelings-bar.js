@@ -20,8 +20,8 @@ const FeelingsBarChart = () => {
   };
   return (
     <div style={{ marginTop: `60px`, marginBottom: `60px` }}>
-      <h1 className="text-3xl text-center mb-0">The Feelings</h1>
-      <div style={{ height: `450px`, marginTop: 0 }}>
+      <h3 className="text-xl text-center mb-0">How often did you have this feeling during the last two weeks?</h3>
+      <div style={{ height: `450px` }}>
         <ResponsiveBar
           data={data}
           keys={["NC", "0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10"]}
@@ -50,15 +50,9 @@ const FeelingsBarChart = () => {
           axisRight={null}
           axisBottom={{
             tickSize: 0,
-            legend: "Genres",
+            legend: "Ratio of answers per level",
             legendPosition: "middle",
             legendOffset: 32,
-          }}
-          axisLeft={{
-            tickSize: 0,
-            legend: "Ratio of Collaborations",
-            legendPosition: "middle",
-            legendOffset: -70,
           }}
           labelSkipWidth={12}
           labelSkipHeight={12}

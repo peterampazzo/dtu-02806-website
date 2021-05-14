@@ -34,7 +34,7 @@ const IndexPage = ({ data }) => {
               Visualizing child welfare in Barcelona
             </h1>
             <div className="flex flex-col m-auto w-full md:w-4/6 justify-center">
-              <h4 className="text-lg md:text-2xl text-center mb-8 m-auto">
+              <h4 className="text-lg md:text-xl text-center mb-8 m-auto">
                 There are a lot of opinions on what is best for kids. From
                 parents trying to educate them, to politicians defining the
                 educational system. 

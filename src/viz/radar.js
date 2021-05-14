@@ -17,9 +17,10 @@ const RadarPlot = ({ layers, data }) => {
     >
       <text
         style={{
-          fontSize: 12,
+          fontSize: 18,
           fontWeight: "bold",
-          fill: "#3a9896",
+          fill: "#000",
+          // textTransform: `uppercase`,
         }}
       >
         {id}
@@ -34,13 +35,13 @@ const RadarPlot = ({ layers, data }) => {
         keys={layers}
         indexBy="value"
         maxValue="auto"
-        margin={{ top: 10, right: 60, bottom: 10, left: 80 }}
+        margin={{ top: 80, right: 60, bottom: 10, left: 80 }}
         // curve="linearClosed"
         borderWidth={1}
         borderColor={(d) => colors_district[d.key]}
         gridLevels={5}
         gridShape="linear"
-        gridLabelOffset={20}
+        gridLabelOffset={22}
         enableDots={false}
         colors={(d) => colors_district[d.key]}
         fillOpacity={0.5}
