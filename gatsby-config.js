@@ -28,6 +28,14 @@ module.exports = {
     {
       resolve: `gatsby-plugin-mdx`,
       options: {
+        gatsbyRemarkPlugins: [
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 980,
+            },
+          },
+        ],
         remarkPlugins: [remark_math, remark_html_katex],
       },
     },

@@ -47,29 +47,20 @@ const IndexPage = ({ data }) => {
           </div>
         </div>
         <main className="font-serif">
-          <p>
-            Donec ut dolor sit amet erat consequat tempor. Integer dictum
-            ultrices justo, nec dapibus tortor suscipit quis. Ut hendrerit
-            libero vitae felis euismod, non commodo lorem bibendum. Cras
-            laoreet, arcu ac semper facilisis, ante nulla pulvinar odio, non
-            congue ligula dui sed arcu. Donec vitae ipsum mollis, lacinia odio
-            a, imperdiet nunc. className aptent taciti sociosqu ad litora
-            torquent per conubia nostra, per inceptos himenaeos.
-          </p>
-          <div className="mx-auto" style={{ height: `450px`, width: `1200px` }}>
-            <iframe src="/bokeh.html" className="h-full w-full" title="bokeh" />
-          </div>
-          <Row className="bg-black text-white">
+          <Row>
             <MDXRenderer>{data.about.body}</MDXRenderer>
           </Row>
           <Row className="bg-yellow-700 text-white">
-            <MDXRenderer>{data.neighbourhoods.body}</MDXRenderer>
+            <MDXRenderer>{data.districts.body}</MDXRenderer>
           </Row>
+          <div className="mx-auto" style={{ height: `450px`, width: `1200px` }}>
+            <iframe src="/bokeh.html" className="h-full w-full" title="bokeh" />
+          </div>
           <Row className="bg-green-700">
             <MDXRenderer>{data.feelings.body}</MDXRenderer>
           </Row>
           <Row className="bg-green-700">
-            <MDXRenderer>{data.clustering.body}</MDXRenderer>
+            <MDXRenderer>{data.satifaction.body}</MDXRenderer>
           </Row>
           <p className="mt-8">
             Nunc et libero est. Vestibulum fringilla, metus in tempus suscipit,
@@ -96,13 +87,13 @@ export const pageQuery = graphql`
     about: mdx(frontmatter: { id: { eq: "about" } }) {
       body
     }
-    neighbourhoods: mdx(frontmatter: { id: { eq: "neighbourhoods" } }) {
+    districts: mdx(frontmatter: { id: { eq: "districts" } }) {
       body
     }
     feelings: mdx(frontmatter: { id: { eq: "feelings" } }) {
       body
     }
-    clustering: mdx(frontmatter: { id: { eq: "clustering" } }) {
+    satifaction: mdx(frontmatter: { id: { eq: "satifaction" } }) {
       body
     }
   }
