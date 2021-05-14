@@ -31,7 +31,7 @@ const IndexPage = ({ data }) => {
               02806 Social data analysis and visualization
             </h3>
             <h1 className="text-4xl md:text-6xl text-center font-extrabold mb-10 font-serif">
-              We created a speaker rider because journalism didn’t have one
+             Visualizing child welfare in Barcelona
             </h1>
             <div className="flex flex-col m-auto w-full md:w-4/6 justify-center">
               <h4 className="text-lg md:text-2xl text-center mb-8 m-auto">
@@ -63,7 +63,7 @@ const IndexPage = ({ data }) => {
             <MDXRenderer>{data.satifaction.body}</MDXRenderer>
           </Row>
           <p className="mt-8">
-            Nunc et libero est. Vestibulum fringilla, metus in tempus suscipit,
+            CONCLUSION - Nunc et libero est. Vestibulum fringilla, metus in tempus suscipit,
             quam arcu condimentum nunc, nec tincidunt tortor nisi fringilla
             erat. Nullam venenatis, nulla sit amet malesuada tempor, nisl odio
             placerat dui, placerat scelerisque ante felis congue nulla. Proin
