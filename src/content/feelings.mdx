@@ -8,26 +8,39 @@ import FeelingsDist from "../viz/feelings-dist";
 
 # Feelings
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-Pellentesque dictum leo lorem. Curabitur blandit arcu at felis
-hendrerit, nec tincidunt sapien dignissim. Aenean auctor
-sagittis lectus id ullamcorper. Donec euismod magna urna.
-Vestibulum at faucibus est, a fermentum ex. Donec ultrices
-condimentum risus. Nullam ut ultricies velit.
-
-<Radar />
-
-Nunc convallis ut ipsum efficitur malesuada. Nam in scelerisque enim, iaculis
-posuere tellus. Fusce ante leo, mollis at tortor at, sodales
-luctus tellus. Morbi fringilla varius molestie. Morbi sit amet
-pretium quam. Quisque ac dolor in mauris feugiat sagittis.
+To explore the frequency of different emotions the survey includes one question where kids are asked to identify how often they have felt an emotions during the last two weeks. The kids are provided with a table with levels 0 to 10 and they need to mark one value. It is explained that 0 represents that you have _Not felt_ this emotion in the last two weeks and 10 you have felt it _All the time_.
 
 <FeelingsBarChart />
 
-Nunc convallis ut ipsum efficitur malesuada. Nam in scelerisque enim, iaculis
-posuere tellus. Fusce ante leo, mollis at tortor at, sodales
-luctus tellus. Morbi fringilla varius molestie. Morbi sit amet
-pretium quam. Quisque ac dolor in mauris feugiat sagittis.
+By inspecting the colour grading, it is possible to appreciate the importance of extreme answers.  The higher proportion of answers falls in the extreme values _All the time_  (10) for the positive feelings and _Never_ (0) on the most negative feelings (reaching values around 20%).
+
+This tendency to select the extreme answers can be related to the fact that we are analyzing kids between ages 10 to 12. Ages where the characterized sensibility of adults, is not yet completely developed [1](https://psycnet.apa.org/record/1995-40081-001). When looking at surveys from teenagers and adults it is possible to see a change in the behaviour [Valors socials i polítics a Catalunya. 2015 REO 798. Generalitat de
+Catalunya.](https://ceo.gencat.cat/ca/estudis/registre-estudis-dopinio/estudis-dopinio-ceo/societat/detall/index.html?id=5509). 
+This phenomenon is described as **Vital Optimism-Bias** (Casas, 2011; Casas i Bello, 2012) and explains how kids tend to answer more positively than adults when asked about their welfare.
+
+Moreover, it is possible to observe in the plot, the tendency to mark _All the time_ in the positive feelings is higher than to mark _Never_ on the negative feelings, reflecting that this optimism is more noticeable in the positive feelings.
+
+However, it is important to not look only at the extreme answers but understand the details of each feeling distribution. The next plot displays the ratio of the different frequency levels per pair of opposite feelings. To get a view of the complete distribution of one feeling, for instance to observe the tail of _Happiness_, it is possible to select the different feelings on the legend (by clicking on them).  Furthermore, it is possible to explore the differences between districts by filtering in the top panel, which provides details on demand.
+
+MISSING PLOT - BOKEH
+
+It is possible to appreciate that the peak is more pronounced in the positive feelings than in the negative ones. With around 50% of the children marking that they felt _Happy_ and _Energetic_, _"All the time"_. Only 2% of kids marked a level of 4 or less in Happiness, nonetheless, even if the ratio is low it should not be overlooked since this represents that approximately 80 of the kids surveyed are rarely feeling happy.
+
+The peak for the rest of the feelings falls within the 20%-30% range, with _Calm_ reassembling more the behaviour of the negative feelings (with a mirrored distribution). It is as well possible to see a peak on the answers at level 5, which falls in the middle of the distribution. This behaviour is not strange, since could reflect the more hesitant kids.
+
+When evaluating the negative feelings it is possible to see that the tail of the distribution is wider. This represents that even if kids will generally say that they experience _Happiness_ _"All the time"_, 14% of them will experience _Sadness_ _"Usually"_, marking it with a level of 7 or above. The same is observed with _Stress_ and _Boredom_, which reaches a proportion of 30% and 22% respectively, in the same frequency level. 
+
+
+<Radar />
+
+While the behaviour for the positive feelings is maintained for the different districts. There are some clear deviations on the negative feelings. 
+
+If we take the district with the highest RFD Index, _Sarrià-Sant Gervasi_ and compare it with the lowest one, _Nou Barris_. It is possible to detect an increase for _Nou Barris_ in the level of Boredom and Sadness of 8 and 4 points respectively. Indicating a difference in behaviour. However, this pattern is not always maintained. 
+
+When comparing the districts in the lower range of  RFD Index (_Nou Barris_, _Horta-Guinardó_ and _Sant Andreu_) it is possible to observe that the behaviour of  _Horta-Guinardó_ is similar to _Nou Barris_  but the level of stress is 5 points higher. Instead the behaviour of  _Sant Andreu_ reassembles more the behaviour detected for _Sarrià-Sant Gervasi_.
+
+Therefore, even if we can detect differences between the different neighbourhoods, it is important to look into other variables that might be affecting the emotions of the children. 
+
 
 <div className="grid grid-cols-2">
   <FeelingsDist index={1} />
