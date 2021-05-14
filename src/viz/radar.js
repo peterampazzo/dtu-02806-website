@@ -28,7 +28,7 @@ const RadarPlot = ({ layers, data }) => {
   );
 
   return (
-    <div style={{ height: `450px` }}>
+    <div style={{ height: `450px` }} id="radar">
       <ResponsiveRadar
         data={data}
         keys={layers}

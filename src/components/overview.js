@@ -46,9 +46,9 @@ const OverviewPlots = () => {
         }}
         row
       >
-        <FormControlLabel value={"1"} control={<Radio />} label="Plot 1" />
-        <FormControlLabel value={"2"} control={<Radio />} label="Plot 2" />
-        <FormControlLabel value={"3"} control={<Radio />} label="Plot 3" />
+        <FormControlLabel value={"1"} control={<Radio />} label="Gender" />
+        <FormControlLabel value={"2"} control={<Radio />} label="Age" />
+        <FormControlLabel value={"3"} control={<Radio />} label="Learning Difficulties" />
       </RadioGroup>
       <SatisfactionBarChart data={data} labels={labels} />
     </div>

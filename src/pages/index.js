@@ -37,9 +37,7 @@ const IndexPage = ({ data }) => {
               <h4 className="text-lg md:text-xl text-center mb-8 m-auto">
                 There are a lot of opinions on what is best for kids. From
                 parents trying to educate them, to politicians defining the
-                educational system. 
-    
-                But what actions will help shape a happy and
+                educational system. But what actions will help shape a happy and
                 healthy society? And how can we improve children's well-being?
               </h4>
               <div className="border-yellow-600 border-t-2 border-b-2 py-4 px-6 mb-12">
@@ -80,6 +78,7 @@ const IndexPage = ({ data }) => {
             tincidunt ut leo at vehicula. Duis tortor neque, mollis ac
             condimentum et, interdum nec nulla.
           </p>
+          <Links />
         </main>
       </div>
     </ThemeProvider>

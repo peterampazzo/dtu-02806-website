@@ -5,7 +5,7 @@ import { legend } from "../utils/map-colors";
 
 const Maps = () => {
   return (
-    <div className="my-4">
+    <div className="my-4" id="maps">
       <div className="grid grid-cols-2 gap-4 pb-6">
         <Map property={"b_seguretat"} title="Perception of district security" />
         <Map property={"b_joc"} title="Perception of district playground areas" />
