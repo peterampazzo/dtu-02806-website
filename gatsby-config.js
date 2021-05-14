@@ -6,7 +6,16 @@ module.exports = {
   plugins: [
     "gatsby-plugin-image",
     "gatsby-plugin-react-helmet",
-    `gatsby-plugin-netlify`,
+    {
+      resolve: `gatsby-plugin-netlify`,
+      options: {
+        headers: {
+          "/bokeh.html": [
+            "X-Frame-Options: SAMEORIGIN",
+          ],
+        },
+      },
+    },
     // "gatsby-plugin-sitemap",
     "gatsby-plugin-postcss",
     {

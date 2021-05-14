@@ -15,6 +15,10 @@
     @apply max-w-3xl;
     @apply mx-auto;
   }
+  main a {
+    @apply underline;
+    @apply font-extrabold;
+  }
   main h1 {
     @apply font-serif;
     @apply mb-8;
