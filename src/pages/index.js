@@ -37,7 +37,7 @@ const IndexPage = ({ data }) => {
               <h4 className="text-lg md:text-2xl text-center mb-8 m-auto">
                 There are a lot of opinions on what is best for kids? From parents trying to educate them to politicians defining the educational system. But what actions will help shape a happy and healthy society? And how can we improve children's well-being? 
               </h4>
-              <div className="border-yellow-600 border-t-2 border-b-2 py-4 px-6 mb-12">
+              <div className="border-yellow-900 border-t-2 border-b-2 py-4 px-6 mb-12">
                 <ul className="list-none flex text-center justify-between text-lg font-medium flex-wrap flex-col md:flex-row">
                   <li>Silvia De Sojo</li>
                   <li>Stefan Petrovic</li>
@@ -52,13 +52,13 @@ const IndexPage = ({ data }) => {
           <Row className="mt-0">
             <MDXRenderer>{data.about.body}</MDXRenderer>
           </Row>
-          <Row className="bg-yellow-700 text-white">
+          <Row className="bg-yellow-200 text-white">
             <MDXRenderer>{data.districts.body}</MDXRenderer>
           </Row>
-          <Row className="bg-green-700">
+          <Row className="bg-yellow-100">
             <MDXRenderer>{data.feelings.body}</MDXRenderer>
           </Row>
-          <Row className="bg-green-700">
+          <Row className="bg-yellow-50">
             <MDXRenderer>{data.satifaction.body}</MDXRenderer>
           </Row>
           <p className="mt-8">
