@@ -35,7 +35,10 @@ const IndexPage = ({ data }) => {
             </h1>
             <div className="flex flex-col m-auto w-full md:w-4/6 justify-center">
               <h4 className="text-lg md:text-xl text-center mb-8 m-auto">
-                The objective of the analysis is to use visualization tools and clustering techniques to recognise the effects of the demographic characteristics of different areas over child welfare.
+                The objective of the analysis is to use visualization tools and
+                clustering techniques to recognise the effects of the
+                demographic characteristics of different areas over child
+                welfare.
               </h4>
               <div className="border-yellow-600 border-t-2 border-b-2 py-4 px-6 mb-12">
                 <ul className="list-none flex text-center justify-between text-lg font-medium flex-wrap flex-col md:flex-row">
