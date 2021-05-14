@@ -1,3 +1,6 @@
+const remark_math = require(`remark-math`);
+const remark_html_katex = require(`remark-html-katex`);
+
 module.exports = {
   flags: { PRESERVE_WEBPACK_CACHE: true },
   siteMetadata: {
@@ -10,9 +13,7 @@ module.exports = {
       resolve: `gatsby-plugin-netlify`,
       options: {
         headers: {
-          "/bokeh.html": [
-            "X-Frame-Options: SAMEORIGIN",
-          ],
+          "/bokeh.html": ["X-Frame-Options: SAMEORIGIN"],
         },
       },
     },
@@ -24,7 +25,12 @@ module.exports = {
         icon: "src/images/icon.png",
       },
     },
-    "gatsby-plugin-mdx",
+    {
+      resolve: `gatsby-plugin-mdx`,
+      options: {
+        remarkPlugins: [remark_math, remark_html_katex],
+      },
+    },
     "gatsby-plugin-sharp",
     "gatsby-transformer-sharp",
     {

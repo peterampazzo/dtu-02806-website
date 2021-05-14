@@ -57,7 +57,7 @@ const IndexPage = ({ data }) => {
             torquent per conubia nostra, per inceptos himenaeos.
           </p>
           <div className="mx-auto" style={{ height: `450px`, width: `1200px` }}>
-            <iframe src="/bokeh.html" className="h-full w-full" />
+            <iframe src="/bokeh.html" className="h-full w-full" title="bokeh" />
           </div>
           <Row className="bg-black text-white">
             <MDXRenderer>{data.about.body}</MDXRenderer>
@@ -67,6 +67,9 @@ const IndexPage = ({ data }) => {
           </Row>
           <Row className="bg-green-700">
             <MDXRenderer>{data.feelings.body}</MDXRenderer>
+          </Row>
+          <Row className="bg-green-700">
+            <MDXRenderer>{data.clustering.body}</MDXRenderer>
           </Row>
           <p className="mt-8">
             Nunc et libero est. Vestibulum fringilla, metus in tempus suscipit,
@@ -97,6 +100,9 @@ export const pageQuery = graphql`
       body
     }
     feelings: mdx(frontmatter: { id: { eq: "feelings" } }) {
+      body
+    }
+    clustering: mdx(frontmatter: { id: { eq: "clustering" } }) {
       body
     }
   }
