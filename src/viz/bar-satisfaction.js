@@ -3,14 +3,17 @@ import React from "react";
 import { ResponsiveBar } from "@nivo/bar";
 import { colors_feeling } from "../utils/colors";
 
-const SatisfactionBarChart = ({ data, labels }) => {
+const SatisfactionBarChart = ({ data, labels, xAxisLabel }) => {
+
+  const { xLabel, offset } = xAxisLabel;
+
   return (
     <div style={{ height: `300px`, maxWidth: `960px` }} className="mx-auto">
       <ResponsiveBar
         data={data}
         keys={["Very", "Fairly", "Slightly", "Not at all", "NC"]}
         indexBy={labels}
-        margin={{ top: 0, right: 130, bottom: 70, left: 200 }}
+        margin={{ top: 0, right: 130, bottom: 70, left: 220 }}
         padding={0.3}
         layout="horizontal"
         enableLabel={false}
@@ -38,12 +41,12 @@ const SatisfactionBarChart = ({ data, labels }) => {
           legendPosition: "middle",
           legendOffset: 32,
         }}
-        //   axisLeft={{
-        //     tickSize: 0,
-        //     legend: "Ratio of Collaborations",
-        //     legendPosition: "middle",
-        //     legendOffset: -70,
-        //   }}
+          axisLeft={{
+            tickSize: 0,
+            legend: xLabel,
+            legendPosition: "middle",
+            legendOffset: offset,
+          }}
         labelSkipWidth={12}
         labelSkipHeight={12}
         labelTextColor={{ from: "color", modifiers: [["darker", 1.6]] }}

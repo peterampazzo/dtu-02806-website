@@ -1,5 +1,5 @@
 import * as React from "react";
-// import Helmet from "react-helmet";
+import Helmet from "react-helmet";
 import { graphql } from "gatsby";
 import { MDXRenderer } from "gatsby-plugin-mdx";
 import { ThemeProvider, createMuiTheme } from "@material-ui/core/styles";
@@ -21,22 +21,54 @@ const IndexPage = ({ data }) => {
     const childClassNames = classNames("mx-auto p-8", className);
     return <div className={childClassNames}>{children}</div>;
   };
-  // bg-yellow-400 bg-opacity-25 
+
+  const title = "Understanding child welfare in Barcelona";
+  const desc = `Our objective is to use visualization tools and clustering
+  techniques to recognise the effects that the demographic
+  characteristics of districts have over child welfare.`;
+
+  const lang = "en";
 
   return (
     <ThemeProvider theme={theme}>
-      <div className="relative overflow-hidden bg-yellow-600 text-white"> 
+      <Helmet
+        htmlAttributes={{ lang }}
+        title={title}
+        meta={[
+          {
+            property: `og:title`,
+            content: title,
+          },
+          {
+            property: `og:type`,
+            content: `website`,
+          },
+          {
+            name: `twitter:card`,
+            content: `summary`,
+          },
+          {
+            name: `twitter:title`,
+            content: title,
+          },
+          {
+            name: `twitter:description`,
+            content: desc,
+          },
+        ]}
+      />
+      <div className="relative overflow-hidden bg-yellow-600 text-white">
         <div className="mx-6">
           <div className="max-w-3xl mx-auto">
             <h3 className="text-md text-center mt-6 mb-8">
               02806 Social data analysis and visualization
             </h3>
             <h1 className="text-4xl md:text-6xl text-center font-extrabold mb-10 font-serif">
-              Understanding child welfare in Barcelona
+              {title}
             </h1>
             <div className="flex flex-col m-auto w-full md:w-4/6 justify-center">
               <h4 className="text-lg md:text-xl text-center mb-8 m-auto">
-                Our objective is to use visualization tools and clustering techniques to recognise the effects that the demographic characteristics of districts have over child welfare.
+                {desc}
               </h4>
               <div className="border-yellow-400 border-t-2 border-b-2 py-4 px-6 mb-12">
                 <ul className="list-none flex text-center justify-between text-lg font-medium flex-wrap flex-col md:flex-row">

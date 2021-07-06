@@ -111,7 +111,7 @@ const RadarBox = () => {
     <div className="mx-auto max-w-6xl	border-2 border-dashed border-gray-600 my-6">
       <div className="p-4">
         <h1 className="text-center mb-4 text-xl">
-          Feelings Radar
+          Ratio of answers for high frequency levels (7 or above)
         </h1>
         <FormGroup
           row

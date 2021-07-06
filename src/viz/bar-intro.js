@@ -12,12 +12,12 @@ const colors = [
 
 const IntroBarChart = ({ data, labels }) => {
   return (
-    <div style={{ height: `150px` }}>
+    <div style={{ height: `200px` }}>
       <ResponsiveBar
         data={data}
         keys={labels}
         indexBy="value"
-        margin={{ top: 0, right: 130, bottom: 70, left: 130 }}
+        margin={{ top: 40, right: 160, bottom: 70, left: 130 }}
         padding={0.3}
         layout="horizontal"
         enableLabel={false}

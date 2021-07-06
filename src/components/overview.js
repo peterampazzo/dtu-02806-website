@@ -13,15 +13,19 @@ import data3 from "../data/learning.json";
 const OverviewPlots = () => {
   const [data, setData] = React.useState(data1);
   const [labels, setLabels] = React.useState("concern");
+  const [legend, setLegend] = React.useState({xLabel: "Genders", offset: -140});
   const [plot, setPlot] = React.useState("1");
 
   React.useEffect(() => {
     if (plot === "1") {
       setData(data1);
+      setLegend({xLabel: "Genders", offset: -70});
     } else if (plot === "2") {
       setData(data2);
+      setLegend({xLabel: "Ages", offset: -70});
     } else if (plot === "3") {
       setData(data3);
+      setLegend({xLabel: "Learning Difficulties", offset: -80});
     }
   }, [plot]);
 
@@ -50,7 +54,7 @@ const OverviewPlots = () => {
         <FormControlLabel value={"2"} control={<Radio />} label="Age" />
         <FormControlLabel value={"3"} control={<Radio />} label="Learning Difficulties" />
       </RadioGroup>
-      <SatisfactionBarChart data={data} labels={labels} />
+      <SatisfactionBarChart data={data} labels={labels} xAxisLabel={legend} />
     </div>
   );
 };

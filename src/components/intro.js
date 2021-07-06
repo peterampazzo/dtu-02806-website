@@ -11,7 +11,7 @@ const Intro = () => {
   const ageData = [
     { value: "Age", 9: 0.1, 10: 38.7, 11: 48.4, 12: 12.1, 13: 0.4, NC: 0.3 },
   ];
-  const ageLabels = ["9", "10", "11", "12", "13", "NC"];
+  const ageLabels = [ "11", "10", "12", "13", "NC", "9"];
   const birthPlaceData = [
     {
       value: "Birthplace",
